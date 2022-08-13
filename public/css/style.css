@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+nav {
+    height: 60px;
+    background-color:#263238;
+    color: darkorange;
+    padding: 13px;
+    font-family: 'roboto',sans-serif;
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    left: 0;
+    top:0;
+    width:100vw;
+}
+
+nav ul{
+    list-style-type: none;
+}
+nav ul li:hover{
+    position: relative;
+    padding-bottom: 9px;
+border-bottom: 4px solid rgb(247, 212, 97);
+    /* width: 30px; */
+    font-size: 40px;
+transition:  4s;
+}
+.gamecontainer{
+
+
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.container{
+display: grid;
+grid-template-columns: repeat(3,10vw);
+grid-template-rows: repeat(3,10vw);
+font-family: 'roboto',sans-serif;
+position: relative;
+}
+
+.items{
+    border: 2px solid;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.items:hover{
+    background-color: rgba(207, 171, 207, 0.808);
+}
+
+.gameinfo{
+    padding: 0 13px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+.imgbox img{ 
+    width: 0;
+    transition: width 1s ease-in-out;
+
+}
+
+.bt-0{
+    border-top: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+body{
+    height: 900px;
+    background-color: rgba(238, 255, 238, 0.699);
+}
+.info{
+    font-size: 1.9rem;
+}
+
+
+.line{
+    background-color: rgb(21, 58, 226);
+    border-radius: 20px;
+    height: 8px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+button{
+    margin-left: 20px;
+     width: 100px;
+     position:relative;
+     top:-4px;
+     border: 3px solid ;
+     border-radius: 28px;
+  background-color: rgba(206, 192, 192, 0.493);
+     color:rgb(85, 83, 83);
+     font-size: 20px;
+     padding: 10px 20px 10px 20px;
+
+}
+
+button:hover{
+    background-color: cornflowerblue;
+    color: #f5f5f5;
+    cursor: pointer;
+}
+@media only screen and (max-width: 950px) {
+    .gamecontainer {
+
+      flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top: 40px;
+    }
+    .gameinfo h1{
+        font-size: 1.7rem;
+    }
+    .container{
+        grid-template-columns: repeat(3,20vw);
+grid-template-rows: repeat(3,20vw);
+    }
+    button{
+        position: relative;
+    top: -1px;
+    }
+    nav{
+        position: fixed;
+    }
+  }
